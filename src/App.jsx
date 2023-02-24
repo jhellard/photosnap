@@ -1,8 +1,16 @@
+import React from "react";
+import { Outlet } from "react-router-dom";
+
+import Header from "./component/Header/Header";
+
 const App = () => {
   return (
-    <main className="min-h-screen grid place-items-center">
-      <h1 className="font-bold">PHOTOSNAP</h1>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 };
 
