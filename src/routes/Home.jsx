@@ -4,6 +4,7 @@ import Designed from "../assets/home/mobile/designed-for-everyone.jpg";
 
 import InfoCard from "../component/InfoCard/InfoCard";
 import StoryCard from "../component/StoryCard/StoryCard";
+import Features from "../component/Features/Features";
 
 import Mountains from "../assets/stories/mobile/mountains.jpg";
 import Cityscapes from "../assets/stories/mobile/cityscapes.jpg";
@@ -43,7 +44,7 @@ const Home = () => {
         bgColor="bgWhite"
         textColor="textBlack"
       />
-      <ul>
+      <ul className="mb-[80px]">
         <StoryCard
           image={Mountains}
           alt="Mountains"
@@ -69,6 +70,7 @@ const Home = () => {
           author="Alexei Borodin"
         />
       </ul>
+      <Features />
     </>
   );
 };
