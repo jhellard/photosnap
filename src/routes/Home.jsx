@@ -67,7 +67,7 @@ const Home = () => {
           image={Architecturals}
           alt="Large building with many windows"
           heading="Architecturals"
-          author="Alexei Borodin"
+          author="Samantha Brooke"
         />
       </ul>
       <Features />

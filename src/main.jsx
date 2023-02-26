@@ -5,12 +5,16 @@ import App from "./App";
 import "./index.css";
 
 import Home from "./routes/Home";
+import Stories from "./routes/Stories";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [{ index: true, element: <Home /> }],
+    children: [
+      { index: true, element: <Home /> },
+      { path: "/stories", element: <Stories /> },
+    ],
   },
 ]);
 

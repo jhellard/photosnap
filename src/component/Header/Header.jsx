@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Logo from "../../assets/shared/desktop/logo.svg";
 import Menu from "./assets/menu.svg";
 import Close from "./assets/close.svg";
@@ -14,15 +16,19 @@ const Header = () => {
 
   return (
     <header className="relative mx-auto flex min-h-[72px] max-w-[1110px] items-center justify-between px-6 sm:px-10">
-      <img src={Logo} alt="Photosnap Logo" />
+      <Link to={"/"}>
+        <img src={Logo} alt="Photosnap Logo" />
+      </Link>
       <nav
         className="absolute top-[72px] left-0 flex hidden min-h-[253px] min-w-full flex-col justify-center bg-pureWhite px-6 text-[15px] font-bold tracking-[2.5px] sm:relative sm:top-0 sm:flex sm:min-h-[auto] sm:min-w-[auto] sm:px-4 sm:text-xs"
         id="nav"
       >
         <ul className="mb-5 flex flex-col items-center gap-5 sm:mb-0 sm:flex-row sm:gap-[37px] sm:tracking-[2px]">
-          <li>STORIES</li>
-          <li>FEATURES</li>
-          <li>PRICING</li>
+          <Link to={"/stories"} onClick={() => menuToggle()}>
+            STORIES
+          </Link>
+          <li className="opacity-50">FEATURES</li>
+          <li className="opacity-50">PRICING</li>
         </ul>
 
         <hr className="mb-5 border-pureBlack opacity-25 sm:hidden" />
