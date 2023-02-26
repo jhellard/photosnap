@@ -17,13 +17,14 @@ const Stories = () => {
         author="John Appleseed"
       />
       <ul>
-        {storyCards.map((story) => (
+        {storyCards.map((story, key) => (
           <StoryCard
             image={story.image}
             date={story.date}
             alt={story.alt}
             heading={story.heading}
             author={story.author}
+            key={key}
           />
         ))}
       </ul>
