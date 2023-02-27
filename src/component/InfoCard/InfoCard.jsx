@@ -27,7 +27,6 @@ const InfoCard = ({
     <section
       className={`flex flex-col ${cardVariants[bgColor]} ${cardVariants[textColor]}`}
     >
-      {/* TODO: PASS ALT TEXT */}
       <img src={image} alt={alt} />
       <section className="relative flex flex-col justify-center py-[72px] pl-[33px] pr-6 text-left">
         {line && <Line />}

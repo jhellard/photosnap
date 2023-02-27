@@ -16,6 +16,7 @@ const Home = () => {
     <>
       <InfoCard
         image={Create}
+        alt="Man standing on dock holding camera"
         headingType="h1"
         heading="CREATE AND SHARE YOUR PHOTO STORIES."
         description="Photosnap is a platform for photographers and visual storytellers. We
@@ -27,6 +28,7 @@ const Home = () => {
       />
       <InfoCard
         image={Stories}
+        alt="Laptop with photo editing software open"
         headingType="h2"
         heading="BEAUTIFUL STORIES EVERY TIME"
         description="We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone."
@@ -37,6 +39,7 @@ const Home = () => {
       />
       <InfoCard
         image={Designed}
+        alt="Man holding large camera"
         headingType="h2"
         heading="DESIGNED FOR EVERYONE"
         description="Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it."
