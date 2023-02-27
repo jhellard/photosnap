@@ -1,6 +1,6 @@
-import Line from "../Line";
+import Line from "./Line";
 
-import Beta from "../../assets/shared/mobile/bg-beta.jpg";
+import Beta from "../assets/shared/mobile/bg-beta.jpg";
 
 const BetaCard = () => {
   return (

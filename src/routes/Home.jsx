@@ -2,9 +2,9 @@ import Create from "../assets/home/mobile/create-and-share.jpg";
 import Stories from "../assets/home/mobile/beautiful-stories.jpg";
 import Designed from "../assets/home/mobile/designed-for-everyone.jpg";
 
-import InfoCard from "../component/InfoCard/InfoCard";
-import StoryCard from "../component/StoryCard/StoryCard";
-import FeaturesContainer from "../component/FeaturesContainer/FeaturesContainer";
+import InfoCard from "../component/InfoCard";
+import StoryCard from "../component/StoryCard";
+import FeaturesContainer from "../component/FeaturesContainer";
 
 import Mountains from "../assets/stories/mobile/mountains.jpg";
 import Cityscapes from "../assets/stories/mobile/cityscapes.jpg";

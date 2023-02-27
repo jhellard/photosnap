@@ -1,6 +1,6 @@
-import InfoCard from "../component/InfoCard/InfoCard";
-import FeaturesContainer from "../component/FeaturesContainer/FeaturesContainer";
-import BetaCard from "../component/BetaCard/BetaCard";
+import InfoCard from "../component/InfoCard";
+import FeaturesContainer from "../component/FeaturesContainer";
+import BetaCard from "../component/BetaCard";
 
 import Hero from "../assets/features/mobile/hero.jpg";
 

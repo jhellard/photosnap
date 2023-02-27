@@ -1,10 +1,10 @@
-import FeatureCard from "../FeatureCard/FeatureCard";
+import FeatureCard from "./FeatureCard";
 
-import Responsive from "../../assets/features/desktop/responsive.svg";
-import NoLimit from "../../assets/features/desktop/no-limit.svg";
-import Embed from "../../assets/features/desktop/embed.svg";
-import Custom from "../../assets/features/desktop/custom-domain.svg";
-import Boost from "../../assets/features/desktop/boost-exposure.svg";
+import Responsive from "../assets/features/desktop/responsive.svg";
+import NoLimit from "../assets/features/desktop/no-limit.svg";
+import Embed from "../assets/features/desktop/embed.svg";
+import Custom from "../assets/features/desktop/custom-domain.svg";
+import Boost from "../assets/features/desktop/boost-exposure.svg";
 
 const Features = ({ padding, allFeatures }) => {
   return (

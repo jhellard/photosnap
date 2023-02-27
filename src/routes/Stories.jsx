@@ -1,5 +1,5 @@
-import FeaturedStoryCard from "../component/FeaturedStoryCard/FeaturedStoryCard";
-import StoryCard from "../component/StoryCard/StoryCard";
+import FeaturedStoryCard from "../component/FeaturedStoryCard";
+import StoryCard from "../component/StoryCard";
 
 import FeaturedImage from "../assets/stories/mobile/moon-of-appalacia.jpg";
 

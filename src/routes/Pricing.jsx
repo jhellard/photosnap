@@ -1,7 +1,7 @@
-import InfoCard from "../component/InfoCard/InfoCard";
+import InfoCard from "../component/InfoCard";
 
 import Hero from "../assets/pricing/mobile/hero.jpg";
-import BetaCard from "../component/BetaCard/BetaCard";
+import BetaCard from "../component/BetaCard";
 import PlanCard from "../component/PlanCard";
 
 const Pricing = () => {
@@ -17,7 +17,7 @@ const Pricing = () => {
         description="Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
         line
       />
-      <section className="pt-[120px]">
+      <section className="pt-16">
         <div className="mb-12 flex items-center justify-center gap-8">
           <span>Monthly</span>
           <div className="flex">
