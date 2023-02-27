@@ -40,13 +40,11 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-
-      {/* TODO: ADD ROUTER LINKS */}
       <ul className="mb-[120px] flex flex-col items-center gap-[19px] text-[12px] font-bold tracking-[2px]">
         <Link to={"/"}>HOME</Link>
         <Link to={"/stories"}>STORIES</Link>
-        <li className="opacity-50">FEATURES</li>
-        <li className="opacity-50">PRICING</li>
+        <Link to={"/features"}>FEATURES</Link>
+        <Link to={"/pricing"}>PRICING</Link>
       </ul>
       <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px]">
         GET AN INVITE

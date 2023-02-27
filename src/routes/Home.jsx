@@ -4,7 +4,7 @@ import Designed from "../assets/home/mobile/designed-for-everyone.jpg";
 
 import InfoCard from "../component/InfoCard/InfoCard";
 import StoryCard from "../component/StoryCard/StoryCard";
-import Features from "../component/Features/Features";
+import FeaturesContainer from "../component/FeaturesContainer/FeaturesContainer";
 
 import Mountains from "../assets/stories/mobile/mountains.jpg";
 import Cityscapes from "../assets/stories/mobile/cityscapes.jpg";
@@ -70,7 +70,7 @@ const Home = () => {
           author="Samantha Brooke"
         />
       </ul>
-      <Features />
+      <FeaturesContainer />
     </>
   );
 };

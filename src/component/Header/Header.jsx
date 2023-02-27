@@ -8,6 +8,8 @@ const Header = () => {
   const menuToggle = () => {
     const nav = document.querySelector("#nav");
     const hamburger = document.querySelector("#nav-hamburger");
+    const overlay = document.querySelector("#overlay");
+    overlay.classList.toggle("hidden");
     nav.classList.toggle("hidden");
     nav.classList.contains("hidden")
       ? (hamburger.src = Menu)
@@ -15,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className="relative mx-auto flex min-h-[72px] max-w-[1110px] items-center justify-between px-6 sm:px-10">
+    <header className="relative z-20 mx-auto flex min-h-[72px] max-w-[1110px] items-center justify-between bg-pureWhite px-6 sm:px-10">
       <Link to={"/"}>
         <img src={Logo} alt="Photosnap Logo" />
       </Link>
@@ -27,8 +29,12 @@ const Header = () => {
           <Link to={"/stories"} onClick={() => menuToggle()}>
             STORIES
           </Link>
-          <li className="opacity-50">FEATURES</li>
-          <li className="opacity-50">PRICING</li>
+          <Link to={"/features"} onClick={() => menuToggle()}>
+            FEATURES
+          </Link>
+          <Link to={"/pricing"} onClick={() => menuToggle()}>
+            PRICING
+          </Link>
         </ul>
 
         <hr className="mb-5 border-pureBlack opacity-25 sm:hidden" />

@@ -8,7 +8,7 @@ const FeaturedStoryCard = ({
 }) => {
   return (
     <section>
-      <img src={image} alt={alt} />
+      <img className="min-w-full" src={image} alt={alt} />
       <section className="flex flex-col bg-pureBlack px-[28px] pt-12 text-pureWhite">
         <span className="mb-4 text-[12px] font-bold tracking-[2px]">
           LAST MONTH'S FEATURED STORY

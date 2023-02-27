@@ -6,6 +6,7 @@ import "./index.css";
 
 import Home from "./routes/Home";
 import Stories from "./routes/Stories";
+import Features from "./routes/Features";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "/stories", element: <Stories /> },
+      { path: "/features", element: <Features /> },
     ],
   },
 ]);

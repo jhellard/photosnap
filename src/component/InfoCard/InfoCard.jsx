@@ -29,25 +29,30 @@ const InfoCard = ({
     >
       {/* TODO: PASS ALT TEXT */}
       <img src={image} alt={alt} />
-      <section className="relative flex min-h-[419px] flex-col items-center justify-center pl-[33px] pr-6 text-left">
+      <section className="relative flex flex-col justify-center py-[72px] pl-[33px] pr-6 text-left">
         {line && <Line />}
         {headingType === "h1" ? (
           <h1 className={headingStyles}>{heading}</h1>
         ) : (
           <h2 className={headingStyles}>{heading}</h2>
         )}
-
-        <p className="mb-[23px] text-[15px] leading-[25px] opacity-60">
+        <p
+          className={`${
+            button && "mb-[23px]"
+          } text-[15px] leading-[25px] opacity-60`}
+        >
           {description}
         </p>
-        <button className="flex items-center gap-[18px] self-start text-[12px] font-bold tracking-[2px]">
-          {button}
-          <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
-            <g fill="none" fillRule="evenodd" stroke="currentColor">
-              <path d="M0 7h41.864M35.428 1l6 6-6 6" />
-            </g>
-          </svg>
-        </button>
+        {button && (
+          <button className="flex items-center gap-[18px] self-start text-[12px] font-bold tracking-[2px]">
+            {button}
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+              <g fill="none" fillRule="evenodd" stroke="currentColor">
+                <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+              </g>
+            </svg>
+          </button>
+        )}
       </section>
     </section>
   );
