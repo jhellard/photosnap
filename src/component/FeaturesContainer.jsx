@@ -9,8 +9,10 @@ import Boost from "../assets/features/desktop/boost-exposure.svg";
 const Features = ({ padding, allFeatures }) => {
   return (
     <ul
-      className={`mb-20 flex flex-col gap-14 px-8 text-center ${
+      className={`mb-20 flex flex-col gap-14 px-8 text-center sm:mb-[120px] ${
         padding && "pt-16"
+      } mx-auto sm:max-w-[535px] ${
+        allFeatures && "items-end sm:grid sm:max-w-full sm:grid-cols-2"
       }`}
     >
       <FeatureCard

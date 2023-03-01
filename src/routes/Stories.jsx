@@ -1,22 +1,20 @@
 import FeaturedStoryCard from "../component/FeaturedStoryCard";
 import StoryCard from "../component/StoryCard";
 
-import FeaturedImage from "../assets/stories/mobile/moon-of-appalacia.jpg";
-
 import storyCards from "../storyCards.json";
 
 const Stories = () => {
   return (
     <>
       <FeaturedStoryCard
-        image={FeaturedImage}
+        image="moon-of-appalacia.jpg"
         alt="Hazy mountains with full moon"
         heading="HAZY FULL MOON OF APPALACHIA"
         description='The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.'
         date="March 2nd 2020"
         author="John Appleseed"
       />
-      <ul>
+      <ul className="grid-cols-2 sm:grid">
         {storyCards.map((story, key) => (
           <StoryCard
             image={story.image}

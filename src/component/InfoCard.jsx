@@ -11,6 +11,7 @@ const InfoCard = ({
   textColor,
   line,
   padding,
+  imageRight,
 }) => {
   const cardVariants = {
     bgBlack: "bg-pureBlack",
@@ -19,16 +20,35 @@ const InfoCard = ({
     textWhite: "text-pureWhite",
   };
 
-  const headingStyles = `mb-4 text-[2rem] font-bold leading-[40px] tracking-[3.33px] ${
+  const headingStyles = `mb-4 text-[2rem] sm:text-[40px] sm:mb-5 sm:leading-[48px] sm:tracking-[4.17px] font-bold leading-[40px] tracking-[3.33px] ${
     padding && "pr-[3rem]"
   }`;
 
   return (
     <section
-      className={`flex flex-col ${cardVariants[bgColor]} ${cardVariants[textColor]}`}
+      className={`flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-1 ${cardVariants[bgColor]} ${cardVariants[textColor]}`}
     >
-      <img src={image} alt={alt} />
-      <section className="relative flex flex-col justify-center py-[72px] pl-[33px] pr-6 text-left">
+      <picture>
+        <source
+          media="(min-width:900px)"
+          srcSet={`../assets/home/desktop/${image}`}
+        />
+        <source
+          media="(min-width:640px)"
+          srcSet={`../assets/home/tablet/${image}`}
+        />
+        <img
+          src={`../assets/home/mobile/${image}`}
+          className="w-full"
+          alt={alt}
+        />
+      </picture>
+
+      <section
+        className={`relative flex flex-col justify-center py-[72px] pl-[33px] pr-6 text-left sm:col-span-2 sm:px-16 ${
+          imageRight && "sm:row-start-1"
+        }`}
+      >
         {line && <Line />}
         {headingType === "h1" ? (
           <h1 className={headingStyles}>{heading}</h1>
@@ -38,7 +58,7 @@ const InfoCard = ({
         <p
           className={`${
             button && "mb-[23px]"
-          } text-[15px] leading-[25px] opacity-60`}
+          } text-[15px] leading-[25px] opacity-60 sm:mb-12`}
         >
           {description}
         </p>

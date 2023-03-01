@@ -1,21 +1,12 @@
-import Create from "../assets/home/mobile/create-and-share.jpg";
-import Stories from "../assets/home/mobile/beautiful-stories.jpg";
-import Designed from "../assets/home/mobile/designed-for-everyone.jpg";
-
 import InfoCard from "../component/InfoCard";
 import StoryCard from "../component/StoryCard";
 import FeaturesContainer from "../component/FeaturesContainer";
-
-import Mountains from "../assets/stories/mobile/mountains.jpg";
-import Cityscapes from "../assets/stories/mobile/cityscapes.jpg";
-import Voyage from "../assets/stories/mobile/18-days-voyage.jpg";
-import Architecturals from "../assets/stories/mobile/architecturals.jpg";
 
 const Home = () => {
   return (
     <>
       <InfoCard
-        image={Create}
+        image="create-and-share.jpg"
         alt="Man standing on dock holding camera"
         headingType="h1"
         heading="CREATE AND SHARE YOUR PHOTO STORIES."
@@ -25,9 +16,10 @@ const Home = () => {
         bgColor="bgBlack"
         textColor="textWhite"
         line
+        imageRight
       />
       <InfoCard
-        image={Stories}
+        image="beautiful-stories.jpg"
         alt="Laptop with photo editing software open"
         headingType="h2"
         heading="BEAUTIFUL STORIES EVERY TIME"
@@ -38,7 +30,7 @@ const Home = () => {
         padding
       />
       <InfoCard
-        image={Designed}
+        image="designed-for-everyone.jpg"
         alt="Man holding large camera"
         headingType="h2"
         heading="DESIGNED FOR EVERYONE"
@@ -46,28 +38,29 @@ const Home = () => {
         button="VIEW THE STORIES"
         bgColor="bgWhite"
         textColor="textBlack"
+        imageRight
       />
-      <ul className="mb-[80px]">
+      <ul className="mb-[80px] sm:mb-[120px] sm:grid sm:grid-cols-2">
         <StoryCard
-          image={Mountains}
+          image="mountains.jpg"
           alt="Mountains"
           heading="The Mountains"
           author="John Appleseed"
         />
         <StoryCard
-          image={Cityscapes}
+          image="cityscapes.jpg"
           alt="Cityscape"
           heading="Sunset Cityscapes"
           author="Benjamin Cruz"
         />
         <StoryCard
-          image={Voyage}
+          image="18-days-voyage.jpg"
           alt="Man walking at sunset"
           heading="18 Days Voyage"
           author="Alexei Borodin"
         />
         <StoryCard
-          image={Architecturals}
+          image="architecturals.jpg"
           alt="Large building with many windows"
           heading="Architecturals"
           author="Samantha Brooke"

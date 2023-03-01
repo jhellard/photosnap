@@ -1,7 +1,18 @@
 const StoryCard = ({ image, date, alt, heading, author }) => {
   return (
     <li className="relative">
-      <img className="min-w-full brightness-[65%]" src={image} alt={alt} />
+      <picture>
+        <source
+          media="(min-width:640px)"
+          srcSet={`../assets/stories/desktop/${image}`}
+        />
+        <img
+          className="min-w-full brightness-[65%]"
+          src={`../assets/stories/mobile/${image}`}
+          alt={alt}
+        />
+      </picture>
+
       <div className="absolute inset-0 mb-10 flex flex-col justify-end px-8 text-pureWhite">
         {date && <span className="mb-1 text-[13px]">{date}</span>}
         <h3 className="mb-1 text-[18px] font-bold leading-[25px]">{heading}</h3>
