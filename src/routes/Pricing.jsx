@@ -18,8 +18,9 @@ const Pricing = () => {
         textColor="textWhite"
         description="Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
         line
+        imageRight
       />
-      <section className="pt-16">
+      <section className="pt-16 sm:pt-[7rem]">
         <div className="mb-12 flex items-center justify-center gap-8">
           <span>Monthly</span>
           <div className="flex">

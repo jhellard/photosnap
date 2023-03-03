@@ -16,6 +16,7 @@ const Home = () => {
         textColor="textWhite"
         line
         imageRight
+        main
       />
       <InfoCard
         image="beautiful-stories.jpg"

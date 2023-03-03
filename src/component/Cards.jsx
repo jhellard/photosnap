@@ -1,4 +1,4 @@
-import { Line, FullLine } from "./Lines";
+import { Line } from "./Lines";
 
 export function InfoCard({
   image,
@@ -12,6 +12,7 @@ export function InfoCard({
   line,
   padding,
   imageRight,
+  main,
 }) {
   const cardVariants = {
     bgBlack: "bg-pureBlack",
@@ -26,7 +27,11 @@ export function InfoCard({
 
   return (
     <section
-      className={`flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-1 ${cardVariants[bgColor]} ${cardVariants[textColor]} relative`}
+      className={`flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-1 ${
+        cardVariants[bgColor]
+      } ${cardVariants[textColor]} relative ${
+        main ? "sm:min-h-[650px]" : "sm:min-h-[600px]"
+      }`}
     >
       <picture>
         <source
@@ -39,7 +44,9 @@ export function InfoCard({
         />
         <img
           src={`../assets/home/mobile/${image}`}
-          className="max-h-[294px] min-w-full object-cover"
+          className={`max-h-[294px] min-w-full object-cover ${
+            main ? "sm:min-h-[650px]" : "sm:min-h-[600px]"
+          }`}
           alt={alt}
         />
       </picture>
@@ -49,7 +56,7 @@ export function InfoCard({
           imageRight && "sm:row-start-1"
         }`}
       >
-        {line && <Line />}
+        {line && <Line type="normal" />}
         {headingType === "h1" ? (
           <h1 className={headingStyles}>{heading}</h1>
         ) : (
@@ -93,7 +100,7 @@ export function PlanCard({ heading, description, price, type }) {
     <div
       className={`relative mx-7 flex flex-col items-center justify-center px-[22px] pt-14 text-center ${cardVariants[type]}`}
     >
-      {type === "pro" && <FullLine />}
+      {type === "pro" && <Line type="full" />}
       <h2 className="mb-[18px] text-[24px] font-bold leading-[25px]">
         {heading}
       </h2>
@@ -134,7 +141,7 @@ export function BetaCard() {
         />
       </picture>
       <section className="relative flex flex-col items-center justify-center py-[64px] pl-[33px] pr-6 text-left sm:flex-row sm:justify-between sm:px-10">
-        <Line full />
+        <Line type="fullH" />
         <h2 className="mb-6 text-[2rem] font-bold leading-[40px] tracking-[3.33px] sm:max-w-[400px] sm:text-[40px] sm:leading-[48px] sm:tracking-[4.17px]">
           WE'RE IN BETA. GET YOUR INVITE TODAY!
         </h2>
@@ -152,9 +159,10 @@ export function BetaCard() {
 }
 
 export function FeatureCard({ image, alt, heading, description }) {
+  // TODO: THIS NEEDS WORK FOR TABLET/MOBILE
   return (
-    <li className="flex flex-col items-center">
-      <img className="mb-12" src={image} alt={alt} />
+    <li className="flex min-h-[236px] flex-col items-center">
+      <img className="mb-12 sm:mb-auto" src={image} alt={alt} />
       <h4 className="mb-4 text-[18px] font-bold leading-[25px]">{heading}</h4>
       <p className="text-[15px] leading-[25px]">{description}</p>
     </li>
@@ -177,7 +185,7 @@ export function FeaturedStoryCard({
           srcSet={`../assets/stories/desktop/${image}`}
         />
         <img
-          className="max-h-[317px] min-w-full object-cover"
+          className="max-h-[317px] min-w-full object-cover sm:max-h-[650px]"
           src={`../assets/stories/mobile/${image}`}
           alt={alt}
         />
