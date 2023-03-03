@@ -54,7 +54,7 @@ const Footer = () => {
           </g>
         </svg>
       </button>
-      <span className="mb-14 text-[15px] opacity-50 sm:row-start-3 sm:mb-0 sm:flex sm:justify-end">
+      <span className="text-[15px] opacity-50 sm:row-start-3 sm:flex sm:justify-end">
         Copyright 2019. All Rights Reserved
       </span>
     </footer>

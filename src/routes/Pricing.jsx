@@ -1,20 +1,16 @@
 import { useState } from "react";
 
-import InfoCard from "../component/InfoCard";
+import { InfoCard, BetaCard, PlanCard } from "../component/Cards";
 
-import Hero from "../assets/pricing/mobile/hero.jpg";
-import BetaCard from "../component/BetaCard";
-import PlanCard from "../component/PlanCard";
 import PricingTable from "../component/PricingTable";
 
 const Pricing = () => {
-  // Sim
   const [planToggle, setPlanToggle] = useState(true);
 
   return (
     <>
       <InfoCard
-        image={Hero}
+        image="pricing.jpg"
         alt="Person taking photos at sunset"
         headingType="h1"
         heading="PRICING"

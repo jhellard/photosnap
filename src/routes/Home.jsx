@@ -1,5 +1,4 @@
-import InfoCard from "../component/InfoCard";
-import StoryCard from "../component/StoryCard";
+import { InfoCard, StoryCard } from "../component/Cards";
 import FeaturesContainer from "../component/FeaturesContainer";
 
 const Home = () => {

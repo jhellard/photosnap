@@ -1,5 +1,4 @@
-import FeaturedStoryCard from "../component/FeaturedStoryCard";
-import StoryCard from "../component/StoryCard";
+import { FeaturedStoryCard, StoryCard } from "../component/Cards";
 
 import storyCards from "../storyCards.json";
 

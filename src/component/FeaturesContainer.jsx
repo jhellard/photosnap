@@ -1,4 +1,4 @@
-import FeatureCard from "./FeatureCard";
+import { FeatureCard } from "./Cards";
 
 import Responsive from "../assets/features/desktop/responsive.svg";
 import NoLimit from "../assets/features/desktop/no-limit.svg";

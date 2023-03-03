@@ -4,7 +4,7 @@ import ScrollToTop from "./component/ScrollToTop";
 
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
-import Overlay from "./component/Overlay";
+
 const App = () => {
   return (
     <>
@@ -13,7 +13,10 @@ const App = () => {
       <main>
         <Outlet />
       </main>
-      <Overlay />
+      <div
+        id="overlay"
+        className="fixed inset-0 z-10 hidden min-h-screen min-w-full bg-pureBlack bg-opacity-50"
+      ></div>
       <Footer />
     </>
   );
