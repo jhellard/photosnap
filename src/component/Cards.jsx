@@ -136,7 +136,7 @@ export function BetaCard() {
         />
         <img
           src={`../assets/shared/mobile/bg-beta.jpg`}
-          className="absolute min-w-full sm:min-h-full"
+          className="absolute max-h-[288px] min-w-full object-cover sm:min-h-full"
           alt="Inside of a ravine"
         />
       </picture>
