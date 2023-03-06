@@ -6,14 +6,18 @@ import Close from "./assets/close.svg";
 
 const Header = () => {
   const menuToggle = () => {
-    const nav = document.querySelector("#nav");
-    const hamburger = document.querySelector("#nav-hamburger");
-    const overlay = document.querySelector("#overlay");
-    overlay.classList.toggle("hidden");
-    nav.classList.toggle("hidden");
-    nav.classList.contains("hidden")
-      ? (hamburger.src = Menu)
-      : (hamburger.src = Close);
+    const isSmallScreen = window.innerWidth < 640;
+
+    if (isSmallScreen) {
+      const nav = document.querySelector("#nav");
+      const hamburger = document.querySelector("#nav-hamburger");
+      const overlay = document.querySelector("#overlay");
+
+      overlay.classList.toggle("hidden");
+      nav.classList.toggle("hidden");
+      nav.classList.toggle("flex");
+      hamburger.src = nav.classList.contains("hidden") ? Menu : Close;
+    }
   };
 
   return (
@@ -22,7 +26,7 @@ const Header = () => {
         <img src={Logo} alt="Photosnap Logo" />
       </Link>
       <nav
-        className="absolute top-[72px] left-0 flex hidden min-h-[253px] min-w-full flex-col justify-center bg-pureWhite px-6 text-[15px] font-bold tracking-[2.5px] sm:relative sm:top-0 sm:flex sm:min-h-[auto] sm:min-w-[auto] sm:px-4 sm:text-xs"
+        className="absolute top-[72px] left-0 hidden min-h-[253px] min-w-full flex-col justify-center bg-pureWhite px-6 text-[15px] font-bold tracking-[2.5px] sm:relative sm:top-0 sm:flex sm:min-h-[auto] sm:min-w-[auto] sm:px-4 sm:text-xs"
         id="nav"
       >
         <ul className="mb-5 flex flex-col items-center gap-5 sm:mb-0 sm:flex-row sm:gap-[37px] sm:tracking-[2px]">

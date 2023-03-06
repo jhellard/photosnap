@@ -27,9 +27,9 @@ export function InfoCard({
 
   return (
     <section
-      className={`flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-1 ${
+      className={`relative flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-1 ${
         cardVariants[bgColor]
-      } ${cardVariants[textColor]} relative ${
+      } ${cardVariants[textColor]}  ${
         main ? "sm:min-h-[650px]" : "sm:min-h-[600px]"
       }`}
     >
