@@ -40,7 +40,7 @@ const Home = () => {
         textColor="textBlack"
         imageRight
       />
-      <ul className="mb-[80px] sm:mb-[120px] sm:grid sm:grid-cols-2">
+      <ul className="mb-[80px] sm:mb-[120px] sm:grid sm:grid-cols-2 md:grid-cols-4">
         <StoryCard
           image="mountains.jpg"
           alt="Mountains"

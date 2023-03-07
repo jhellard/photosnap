@@ -44,7 +44,7 @@ export function InfoCard({
         />
       </picture>
 
-      <section className="relative my-auto py-[72px] pl-[33px] pr-6 sm:py-0 sm:px-[54px]">
+      <section className="relative my-auto py-[72px] pl-[33px] pr-6 sm:py-0 sm:px-[54px] md:px-[111px]">
         {line && <Line type="normal" />}
         {headingType === "h1" ? (
           <h1 className={headingStyles}>{heading}</h1>
@@ -53,8 +53,8 @@ export function InfoCard({
         )}
         <p
           className={`${
-            button && "mb-[23px]"
-          } text-[15px] leading-[25px] opacity-60 sm:mb-12`}
+            button && "mb-[23px] sm:mb-12"
+          } text-[15px] leading-[25px] opacity-60`}
         >
           {description}
         </p>
@@ -92,23 +92,26 @@ export function PlanCard({ heading, description, price, type }) {
 
   return (
     <div
-      className={`relative mx-7 flex flex-col items-center justify-center px-[22px] pt-14 text-center ${cardVariants[type]}`}
+      className={`relative mx-7 flex flex-col items-center justify-center px-[22px] pt-14 text-center sm:grid sm:grid-cols-2 sm:p-[40px] sm:text-left ${cardVariants[type]}`}
     >
       {type === "pro" && <Line type="full" />}
-      <h2 className="mb-[18px] text-[24px] font-bold leading-[25px]">
-        {heading}
-      </h2>
-      <p className="mb-10 text-[15px] leading-[25px] opacity-60">
-        {description}
-      </p>
-      <h3 className="mb-10 text-[40px] font-bold leading-[48px] tracking-[4.17px]">
+      <div>
+        <h2 className="mb-[18px] text-[24px] font-bold leading-[25px]">
+          {heading}
+        </h2>
+        <p className="mb-10 text-[15px] leading-[25px] opacity-60 sm:mb-8">
+          {description}
+        </p>
+      </div>
+
+      <h3 className="mb-10 text-[40px] font-bold leading-[48px] tracking-[4.17px] sm:self-start sm:text-right">
         {price}
         <span className="block text-[15px] leading-[25px] tracking-normal opacity-60">
           per month
         </span>
       </h3>
       <button
-        className={`text-bold mb-10 min-w-[95%] py-3 px-4 text-[12px] tracking-[2px] ${buttonVariants[type]}`}
+        className={`text-bold mb-10 min-w-[95%] py-3 px-4 text-[12px] tracking-[2px] ${buttonVariants[type]} sm:mb-0`}
       >
         PICK PLAN
       </button>
@@ -155,8 +158,8 @@ export function BetaCard() {
 export function FeatureCard({ image, alt, heading, description }) {
   // TODO: THIS NEEDS WORK FOR TABLET/MOBILE
   return (
-    <li className="flex min-h-[236px] flex-col items-center">
-      <img className="mb-12 sm:mb-auto" src={image} alt={alt} />
+    <li className="flex flex-col items-center justify-end">
+      <img className="mb-12 inline-block" src={image} alt={alt} />
       <h4 className="mb-4 text-[18px] font-bold leading-[25px]">{heading}</h4>
       <p className="text-[15px] leading-[25px]">{description}</p>
     </li>
