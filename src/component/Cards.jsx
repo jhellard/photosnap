@@ -12,7 +12,6 @@ export function InfoCard({
   line,
   padding,
   imageRight,
-  main,
 }) {
   const cardVariants = {
     bgBlack: "bg-pureBlack",
@@ -21,19 +20,15 @@ export function InfoCard({
     textWhite: "text-pureWhite",
   };
 
-  const headingStyles = `mb-4 text-[2rem] sm:text-[40px] sm:mb-5 sm:leading-[48px] sm:tracking-[4.17px] font-bold leading-[40px] tracking-[3.33px] ${
-    padding && "pr-[3rem]"
+  const headingStyles = `mb-4 text-headingClamp sm:mb-5 sm:leading-[48px] sm:tracking-[4.17px] font-bold leading-[40px] tracking-[3.33px] ${
+    padding && "sm:max-w-[330px]"
   }`;
 
   return (
     <section
-      className={`relative flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-1 ${
-        cardVariants[bgColor]
-      } ${cardVariants[textColor]}  ${
-        main ? "sm:min-h-[650px]" : "sm:min-h-[600px]"
-      }`}
+      className={`flex flex-col sm:flex-row ${cardVariants[bgColor]} ${cardVariants[textColor]}`}
     >
-      <picture>
+      <picture className={`${imageRight && "sm:order-2"}`}>
         <source
           media="(min-width:900px)"
           srcSet={`../assets/home/desktop/${image}`}
@@ -44,18 +39,12 @@ export function InfoCard({
         />
         <img
           src={`../assets/home/mobile/${image}`}
-          className={`max-h-[294px] min-w-full object-cover ${
-            main ? "sm:min-h-[650px]" : "sm:min-h-[600px]"
-          }`}
           alt={alt}
+          className="min-w-full sm:max-w-none"
         />
       </picture>
 
-      <section
-        className={`relative flex flex-col justify-center py-[72px] pl-[33px] pr-6 text-left sm:col-span-2 sm:px-16 ${
-          imageRight && "sm:row-start-1"
-        }`}
-      >
+      <section className="relative my-auto py-[72px] pl-[33px] pr-6 sm:py-0 sm:px-[54px]">
         {line && <Line type="normal" />}
         {headingType === "h1" ? (
           <h1 className={headingStyles}>{heading}</h1>
@@ -70,9 +59,14 @@ export function InfoCard({
           {description}
         </p>
         {button && (
-          <button className="flex items-center gap-[18px] self-start text-[12px] font-bold tracking-[2px]">
+          <button className="text-[12px] font-bold tracking-[2px]">
             {button}
-            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+            <svg
+              className="ml-[18px] inline-block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="43"
+              height="16"
+            >
               <g fill="none" fillRule="evenodd" stroke="currentColor">
                 <path d="M0 7h41.864M35.428 1l6 6-6 6" />
               </g>

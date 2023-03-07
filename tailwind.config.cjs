@@ -11,6 +11,9 @@ module.exports = {
         bgGradiant2: "#BC7198",
         bgGradiant3: "#5A77FF",
       },
+      fontSize: {
+        headingClamp: "clamp(2rem, 1.523rem + 2.036vw, 2.5rem)"
+      }
     },
   },
   plugins: [],

@@ -50,3 +50,7 @@ input:checked + label:after {
 label:active:after {
   width: 40px;
 }
+
+.testClamp {
+  font-size: clamp(2rem, 1.523rem + 2.036vw, 2.5rem);
+}
