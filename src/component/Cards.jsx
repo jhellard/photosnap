@@ -59,7 +59,7 @@ export function InfoCard({
           {description}
         </p>
         {button && (
-          <button className="text-[12px] font-bold tracking-[2px]">
+          <button className="text-[12px] font-bold tracking-[2px] hover:underline">
             {button}
             <svg
               className="ml-[18px] inline-block"
@@ -111,7 +111,7 @@ export function PlanCard({ heading, description, price, type }) {
         </span>
       </h3>
       <button
-        className={`text-bold mb-10 min-w-[95%] py-3 px-4 text-[12px] tracking-[2px] md:min-w-full ${buttonVariants[type]} sm:mb-0`}
+        className={`text-bold mb-10 min-w-[95%] py-3 px-4 text-[12px] tracking-[2px] md:min-w-full ${buttonVariants[type]} hover:bg-lightGrey hover:text-pureBlack sm:mb-0`}
       >
         PICK PLAN
       </button>
@@ -204,7 +204,7 @@ export function FeaturedStoryCard({
         <p className="mb-6 text-[15px] leading-[25px] opacity-60">
           {description}
         </p>
-        <button className="mb-12 flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] sm:mb-0">
+        <button className="mb-12 flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] hover:underline sm:mb-0">
           READ THE STORY
           <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
             <g fill="none" fillRule="evenodd" stroke="currentColor">
@@ -219,7 +219,7 @@ export function FeaturedStoryCard({
 
 export function StoryCard({ image, date, alt, heading, author }) {
   return (
-    <li className="relative">
+    <li className="group relative bottom-0 transition-all hover:bottom-6">
       <picture>
         <source
           media="(min-width:640px)"
@@ -237,7 +237,7 @@ export function StoryCard({ image, date, alt, heading, author }) {
         <h3 className="mb-1 text-[18px] font-bold leading-[25px]">{heading}</h3>
         <span className="mb-4 text-[13px]">{`by ${author}`}</span>
         <hr className="mb-5 opacity-25" />
-        <button className="flex items-center justify-between text-[12px] font-bold tracking-[2px]">
+        <button className="flex items-center justify-between text-[12px] font-bold tracking-[2px] hover:underline">
           READ STORY
           <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
             <g fill="none" fillRule="evenodd" stroke="currentColor">
@@ -246,6 +246,7 @@ export function StoryCard({ image, date, alt, heading, author }) {
           </svg>
         </button>
       </div>
+      <hr className="absolute bottom-0 hidden h-[6px] w-full border-none bg-gradient-to-t from-bgGradiant1 via-bgGradiant2 to-bgGradiant3 group-hover:block" />
     </li>
   );
 }

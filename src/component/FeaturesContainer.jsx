@@ -13,7 +13,7 @@ const Features = ({ padding, allFeatures }) => {
         padding && "pt-16"
       } mx-auto sm:max-w-[535px] ${
         allFeatures &&
-        "items-end sm:grid sm:max-w-full sm:grid-cols-2 md:grid-cols-3 md:gap-y-[104px]"
+        "items-end sm:grid sm:max-w-full sm:grid-cols-2 md:my-[160px] md:grid-cols-3 md:gap-y-[104px] md:py-0"
       }`}
     >
       <FeatureCard

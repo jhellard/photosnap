@@ -30,23 +30,35 @@ const Header = () => {
         id="nav"
       >
         <ul className="mb-5 flex flex-col items-center gap-5 sm:mb-0 sm:flex-row sm:gap-[37px] sm:tracking-[2px]">
-          <Link to={"/stories"} onClick={() => menuToggle()}>
+          <Link
+            to={"/stories"}
+            className="hover:opacity-50"
+            onClick={() => menuToggle()}
+          >
             STORIES
           </Link>
-          <Link to={"/features"} onClick={() => menuToggle()}>
+          <Link
+            to={"/features"}
+            className="hover:opacity-50"
+            onClick={() => menuToggle()}
+          >
             FEATURES
           </Link>
-          <Link to={"/pricing"} onClick={() => menuToggle()}>
+          <Link
+            to={"/pricing"}
+            className="hover:opacity-50"
+            onClick={() => menuToggle()}
+          >
             PRICING
           </Link>
         </ul>
 
         <hr className="mb-5 border-pureBlack opacity-25 sm:hidden" />
-        <button className="min-h-[3rem] min-w-full bg-pureBlack tracking-[inherit] text-pureWhite sm:hidden">
+        <button className="min-h-[3rem] min-w-full bg-pureBlack font-bold tracking-[inherit] text-pureWhite sm:hidden">
           GET AN INVITE
         </button>
       </nav>
-      <button className="hidden min-h-[40px] min-w-[158px] bg-pureBlack text-xs tracking-[2.5px] text-pureWhite sm:block">
+      <button className="hidden min-h-[40px] min-w-[158px] bg-pureBlack text-xs font-bold tracking-[2.5px] text-pureWhite hover:bg-lightGrey hover:text-pureBlack sm:block">
         GET AN INVITE
       </button>
       <button

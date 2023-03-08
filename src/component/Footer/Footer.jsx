@@ -44,12 +44,20 @@ const Footer = () => {
         </li>
       </ul>
       <ul className="mb-[120px] flex flex-col items-center gap-[19px] text-[12px] font-bold tracking-[2px] sm:row-start-2 sm:mb-[36px] sm:flex-row md:row-span-2 md:mb-0 md:flex-col md:self-center md:justify-self-start">
-        <Link to={"/"}>HOME</Link>
-        <Link to={"/stories"}>STORIES</Link>
-        <Link to={"/features"}>FEATURES</Link>
-        <Link to={"/pricing"}>PRICING</Link>
+        <Link to={"/"} className="hover:opacity-50">
+          HOME
+        </Link>
+        <Link to={"/stories"} className="hover:opacity-50">
+          STORIES
+        </Link>
+        <Link to={"/features"} className="hover:opacity-50">
+          FEATURES
+        </Link>
+        <Link to={"/pricing"} className="hover:opacity-50">
+          PRICING
+        </Link>
       </ul>
-      <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] sm:mb-0 sm:justify-end md:col-start-5 md:self-start">
+      <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] hover:underline sm:mb-0 sm:justify-end md:col-start-5 md:self-start">
         GET AN INVITE
         <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
           <g fill="none" fillRule="evenodd" stroke="currentColor">
