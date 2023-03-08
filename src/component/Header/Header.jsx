@@ -26,11 +26,12 @@ const Header = () => {
         id="nav"
       >
         <ul className="mb-5 flex flex-col items-center gap-5 sm:mb-0 sm:flex-row sm:gap-[37px] sm:tracking-[2px]">
-          {["STORIES", "FEATURES", "PRICING"].map((link) => (
+          {["STORIES", "FEATURES", "PRICING"].map((link, key) => (
             <Link
               to={`/${link.toLowerCase()}`}
               className="hover:opacity-50"
               onClick={toggleMenu}
+              key={key}
             >
               {link}
             </Link>
