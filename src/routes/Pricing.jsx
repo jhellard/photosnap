@@ -34,7 +34,7 @@ const Pricing = () => {
           <span>Yearly</span>
         </div>
 
-        <ul className="mb-16 flex flex-col gap-6">
+        <ul className="mb-16 flex flex-col gap-6 md:mx-4 md:flex-row md:items-center md:justify-center md:gap-[30px]">
           <PlanCard
             heading="Basic"
             description="Includes basic usage of our platform. Recommended for new and aspiring photographers."

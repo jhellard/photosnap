@@ -10,7 +10,7 @@ const App = () => {
     <>
       <ScrollToTop />
       <Header />
-      <main>
+      <main className="mx-auto max-w-[1440px]">
         <Outlet />
       </main>
       <div

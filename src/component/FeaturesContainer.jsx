@@ -12,7 +12,8 @@ const Features = ({ padding, allFeatures }) => {
       className={`mb-[91px] flex flex-col gap-14 px-8 text-center sm:mb-[120px] sm:gap-x-[13px] sm:gap-y-[72px] md:max-w-full md:flex-row md:gap-[30px] md:px-[165px] ${
         padding && "pt-16"
       } mx-auto sm:max-w-[535px] ${
-        allFeatures && "items-end sm:grid sm:max-w-full sm:grid-cols-2"
+        allFeatures &&
+        "items-end sm:grid sm:max-w-full sm:grid-cols-2 md:grid-cols-3 md:gap-y-[104px]"
       }`}
     >
       <FeatureCard
@@ -26,6 +27,7 @@ const Features = ({ padding, allFeatures }) => {
         alt="infinity symbol"
         heading="No Photo Upload Limit"
         description="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+        padding
       />
       <FeatureCard
         image={Embed}

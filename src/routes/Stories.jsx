@@ -13,7 +13,7 @@ const Stories = () => {
         date="March 2nd 2020"
         author="John Appleseed"
       />
-      <ul className="grid-cols-2 sm:grid">
+      <ul className="grid-cols-2 sm:grid md:grid-cols-4">
         {storyCards.map((story, key) => (
           <StoryCard
             image={story.image}

@@ -10,10 +10,13 @@ import Instagram from "./assets/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="flex grid-cols-2 grid-rows-3 flex-col items-center bg-pureBlack py-14 text-pureWhite sm:grid sm:px-10 sm:py-12">
-      <img className="mb-8 sm:mb-0" src={Logo} alt="Photosnap Logo" />
-      {/* TODO: MAKE ICONS WHITE */}
-      <ul className="mb-[49px] flex gap-[13.33px] sm:row-start-3 sm:mb-0">
+    <footer className="mx-auto flex max-w-[1440px] grid-cols-2 grid-rows-3 flex-col items-center bg-pureBlack py-14 text-pureWhite sm:grid sm:px-10 sm:py-12 md:grid-cols-5 md:grid-rows-2">
+      <img
+        className="mb-8 sm:mb-0 md:self-start"
+        src={Logo}
+        alt="Photosnap Logo"
+      />
+      <ul className="mb-[49px] flex gap-[13.33px] sm:row-start-3 sm:mb-0 md:row-start-2 md:self-end">
         <li>
           <a href="#">
             <img src={Facebook} alt="Facebook logo" />
@@ -40,13 +43,13 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <ul className="mb-[120px] flex flex-col items-center gap-[19px] text-[12px] font-bold tracking-[2px] sm:row-start-2 sm:mb-[36px] sm:flex-row">
+      <ul className="mb-[120px] flex flex-col items-center gap-[19px] text-[12px] font-bold tracking-[2px] sm:row-start-2 sm:mb-[36px] sm:flex-row md:row-span-2 md:mb-0 md:flex-col md:self-center md:justify-self-start">
         <Link to={"/"}>HOME</Link>
         <Link to={"/stories"}>STORIES</Link>
         <Link to={"/features"}>FEATURES</Link>
         <Link to={"/pricing"}>PRICING</Link>
       </ul>
-      <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] sm:mb-0 sm:justify-end">
+      <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] sm:mb-0 sm:justify-end md:col-start-5 md:self-start">
         GET AN INVITE
         <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
           <g fill="none" fillRule="evenodd" stroke="currentColor">
@@ -54,7 +57,7 @@ const Footer = () => {
           </g>
         </svg>
       </button>
-      <span className="text-[15px] opacity-50 sm:row-start-3 sm:flex sm:justify-end">
+      <span className="text-[15px] opacity-50 sm:row-start-3 sm:flex sm:justify-end md:col-start-5 md:row-start-2 md:self-end">
         Copyright 2019. All Rights Reserved
       </span>
     </footer>

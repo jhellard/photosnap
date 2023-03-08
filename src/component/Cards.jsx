@@ -40,11 +40,11 @@ export function InfoCard({
         <img
           src={`../assets/home/mobile/${image}`}
           alt={alt}
-          className="min-w-full sm:max-w-none"
+          className="min-w-full sm:max-w-none md:min-h-full md:max-w-full md:object-cover"
         />
       </picture>
 
-      <section className="relative my-auto py-[72px] pl-[33px] pr-6 sm:py-0 sm:px-[54px] md:px-[111px]">
+      <section className="relative my-auto py-[72px] pl-[33px] pr-6 sm:py-0 sm:px-[54px] md:max-w-[610px] md:px-[111px] md:py-4">
         {line && <Line type="normal" />}
         {headingType === "h1" ? (
           <h1 className={headingStyles}>{heading}</h1>
@@ -81,7 +81,7 @@ export function InfoCard({
 export function PlanCard({ heading, description, price, type }) {
   const cardVariants = {
     normal: "bg-[#F5F5F5] text-pureBlack",
-    pro: "bg-pureBlack text-pureWhite",
+    pro: "bg-pureBlack text-pureWhite md:min-h-[470px]",
     button: "bg-pureWhite text-pureBlack",
   };
 
@@ -92,7 +92,7 @@ export function PlanCard({ heading, description, price, type }) {
 
   return (
     <div
-      className={`relative mx-7 flex flex-col items-center justify-center px-[22px] pt-14 text-center sm:grid sm:grid-cols-2 sm:p-[40px] sm:text-left ${cardVariants[type]}`}
+      className={`relative mx-7 flex flex-col items-center justify-center px-[22px] pt-14 text-center sm:grid sm:grid-cols-2 sm:p-[40px] sm:text-left md:max-h-[407px] md:max-w-[350px] ${cardVariants[type]} md:mx-0 md:flex md:text-center `}
     >
       {type === "pro" && <Line type="full" />}
       <div>
@@ -104,14 +104,14 @@ export function PlanCard({ heading, description, price, type }) {
         </p>
       </div>
 
-      <h3 className="mb-10 text-[40px] font-bold leading-[48px] tracking-[4.17px] sm:self-start sm:text-right">
+      <h3 className="mb-10 text-[40px] font-bold leading-[48px] tracking-[4.17px] sm:self-start sm:text-right md:self-center md:text-center">
         {price}
         <span className="block text-[15px] leading-[25px] tracking-normal opacity-60">
           per month
         </span>
       </h3>
       <button
-        className={`text-bold mb-10 min-w-[95%] py-3 px-4 text-[12px] tracking-[2px] ${buttonVariants[type]} sm:mb-0`}
+        className={`text-bold mb-10 min-w-[95%] py-3 px-4 text-[12px] tracking-[2px] md:min-w-full ${buttonVariants[type]} sm:mb-0`}
       >
         PICK PLAN
       </button>
@@ -155,10 +155,13 @@ export function BetaCard() {
   );
 }
 
-export function FeatureCard({ image, alt, heading, description }) {
-  // TODO: THIS NEEDS WORK FOR TABLET/MOBILE
+export function FeatureCard({ image, alt, heading, description, padding }) {
   return (
-    <li className="flex flex-col items-center justify-end">
+    <li
+      className={`flex flex-col items-center md:min-h-full ${
+        padding && "md:pt-[18px]"
+      }`}
+    >
       <img className="mb-12 inline-block" src={image} alt={alt} />
       <h4 className="mb-4 text-[18px] font-bold leading-[25px]">{heading}</h4>
       <p className="text-[15px] leading-[25px]">{description}</p>
@@ -187,7 +190,7 @@ export function FeaturedStoryCard({
           alt={alt}
         />
       </picture>
-      <section className=" flex flex-col bg-pureBlack px-[28px] pt-12 text-pureWhite sm:absolute sm:inset-0 sm:max-w-[450px] sm:justify-center sm:bg-transparent">
+      <section className="flex flex-col bg-pureBlack px-[28px] pt-12 text-pureWhite sm:absolute sm:inset-0 sm:max-w-[450px] sm:justify-center sm:bg-transparent md:ml-[112px] md:pl-0 md:pt-0 md:pr-14">
         <span className="mb-4 text-[12px] font-bold tracking-[2px] sm:mb-6">
           LAST MONTH'S FEATURED STORY
         </span>
