@@ -10,7 +10,7 @@ import Instagram from "./assets/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto flex max-w-[1440px] grid-cols-2 grid-rows-3 flex-col items-center bg-pureBlack py-14 text-pureWhite sm:grid sm:px-10 sm:py-12 md:grid-cols-5 md:grid-rows-2">
+    <footer className="mx-auto flex max-w-[1190px] grid-cols-2 grid-rows-3 flex-col items-center bg-pureBlack py-14 text-pureWhite shadow-bleed sm:grid sm:px-10 sm:py-12 md:grid-cols-5 md:grid-rows-2">
       <img
         className="mb-8 sm:mb-0 md:self-start"
         src={Logo}
@@ -44,18 +44,26 @@ const Footer = () => {
         </li>
       </ul>
       <ul className="mb-[120px] flex flex-col items-center gap-[19px] text-[12px] font-bold tracking-[2px] sm:row-start-2 sm:mb-[36px] sm:flex-row md:row-span-2 md:mb-0 md:flex-col md:self-center md:justify-self-start">
-        <Link to={"/"} className="hover:opacity-50">
-          HOME
-        </Link>
-        <Link to={"/stories"} className="hover:opacity-50">
-          STORIES
-        </Link>
-        <Link to={"/features"} className="hover:opacity-50">
-          FEATURES
-        </Link>
-        <Link to={"/pricing"} className="hover:opacity-50">
-          PRICING
-        </Link>
+        <li>
+          <Link to={"/"} className="hover:opacity-50">
+            HOME
+          </Link>
+        </li>
+        <li>
+          <Link to={"/stories"} className="hover:opacity-50">
+            STORIES
+          </Link>
+        </li>
+        <li>
+          <Link to={"/features"} className="hover:opacity-50">
+            FEATURES
+          </Link>
+        </li>
+        <li>
+          <Link to={"/pricing"} className="hover:opacity-50">
+            PRICING
+          </Link>
+        </li>
       </ul>
       <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] hover:underline sm:mb-0 sm:justify-end md:col-start-5 md:self-start">
         GET AN INVITE

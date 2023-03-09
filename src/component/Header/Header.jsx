@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="relative z-20 mx-auto flex min-h-[72px] max-w-[1110px] items-center justify-between bg-pureWhite px-6 sm:px-10">
+    <header className="relative z-20 mx-auto flex min-h-[72px] max-w-[1158px] items-center justify-between bg-pureWhite px-6 sm:px-10 md:px-6">
       <Link to={"/"}>
         <img src={Logo} alt="Photosnap Logo" />
       </Link>
@@ -27,14 +27,16 @@ const Header = () => {
       >
         <ul className="mb-5 flex flex-col items-center gap-5 sm:mb-0 sm:flex-row sm:gap-[37px] sm:tracking-[2px]">
           {["STORIES", "FEATURES", "PRICING"].map((link, key) => (
-            <Link
-              to={`/${link.toLowerCase()}`}
-              className="hover:opacity-50"
-              onClick={toggleMenu}
-              key={key}
-            >
-              {link}
-            </Link>
+            <li>
+              <Link
+                to={`/${link.toLowerCase()}`}
+                className="hover:opacity-50"
+                onClick={toggleMenu}
+                key={key}
+              >
+                {link}
+              </Link>
+            </li>
           ))}
         </ul>
         <hr className="mb-5 border-pureBlack opacity-25 sm:hidden" />

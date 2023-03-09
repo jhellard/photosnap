@@ -44,7 +44,7 @@ export function InfoCard({
         />
       </picture>
 
-      <section className="relative my-auto py-[72px] pl-[33px] pr-6 sm:py-0 sm:px-[54px] md:max-w-[610px] md:px-[111px] md:py-4">
+      <div className="relative my-auto py-[72px] pl-[33px] pr-6 sm:py-0 sm:px-[54px] md:max-w-[610px] md:px-[111px] md:py-4">
         {line && <Line type="normal" />}
         {headingType === "h1" ? (
           <h1 className={headingStyles}>{heading}</h1>
@@ -73,7 +73,7 @@ export function InfoCard({
             </svg>
           </button>
         )}
-      </section>
+      </div>
     </section>
   );
 }
@@ -164,7 +164,7 @@ export function FeatureCard({ image, alt, heading, description, padding }) {
     >
       <img className="mb-12 inline-block" src={image} alt={alt} />
       <h4 className="mb-4 text-[18px] font-bold leading-[25px]">{heading}</h4>
-      <p className="text-[15px] leading-[25px]">{description}</p>
+      <p className="text-[15px] leading-[25px] opacity-60">{description}</p>
     </li>
   );
 }
