@@ -9,7 +9,7 @@ import Boost from "../assets/features/desktop/boost-exposure.svg";
 const Features = ({ padding, allFeatures }) => {
   return (
     <ul
-      className={`mb-[91px] flex flex-col gap-14 px-8 text-center sm:mb-[120px] sm:gap-x-[13px] sm:gap-y-[72px] md:max-w-full md:flex-row md:gap-[30px] md:px-[165px] ${
+      className={`mb-[91px] flex flex-col gap-14 px-8 text-center sm:mb-[120px] sm:gap-x-[13px] sm:gap-y-[72px] md:max-w-full md:flex-row md:gap-[30px] md:px-[148px] ${
         padding && "pt-16"
       } mx-auto sm:max-w-[535px] ${
         allFeatures &&

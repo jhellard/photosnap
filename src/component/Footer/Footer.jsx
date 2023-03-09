@@ -10,7 +10,7 @@ import Instagram from "./assets/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto flex max-w-[1190px] grid-cols-2 grid-rows-3 flex-col items-center bg-pureBlack py-14 text-pureWhite shadow-bleed sm:grid sm:px-10 sm:py-12 md:grid-cols-5 md:grid-rows-2">
+    <footer className="mx-auto flex max-w-[1190px] grid-cols-2 grid-rows-3 flex-col items-center bg-pureBlack py-14 text-pureWhite shadow-bleed sm:grid sm:px-10 sm:py-12 md:grid-cols-5 md:grid-rows-2 md:py-16">
       <img
         className="mb-8 sm:mb-0 md:self-start"
         src={Logo}
@@ -43,7 +43,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <ul className="mb-[120px] flex flex-col items-center gap-[19px] text-[12px] font-bold tracking-[2px] sm:row-start-2 sm:mb-[36px] sm:flex-row md:row-span-2 md:mb-0 md:flex-col md:self-center md:justify-self-start">
+      <ul className="mb-[120px] flex flex-col items-center gap-[19px] text-[12px] font-bold tracking-[2px] sm:row-start-2 sm:mb-[36px] sm:flex-row md:row-span-2 md:mb-0 md:flex-col md:items-start md:pl-16">
         <li>
           <Link to={"/"} className="hover:opacity-50">
             HOME
@@ -65,7 +65,7 @@ const Footer = () => {
           </Link>
         </li>
       </ul>
-      <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] hover:underline sm:mb-0 sm:justify-end md:col-start-5 md:self-start">
+      <button className="mb-[34px] flex items-center gap-[18px] text-[12px] font-bold tracking-[2px] hover:underline sm:mb-0 sm:justify-end md:col-span-2 md:col-start-4 md:self-start">
         GET AN INVITE
         <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
           <g fill="none" fillRule="evenodd" stroke="currentColor">
@@ -73,7 +73,7 @@ const Footer = () => {
           </g>
         </svg>
       </button>
-      <span className="text-[15px] opacity-50 sm:row-start-3 sm:flex sm:justify-end md:col-start-5 md:row-start-2 md:self-end">
+      <span className="text-[15px] opacity-50 sm:row-start-3 sm:flex sm:justify-end md:col-span-2 md:col-start-4 md:row-start-2 md:self-end">
         Copyright 2019. All Rights Reserved
       </span>
     </footer>
