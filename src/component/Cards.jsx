@@ -255,7 +255,7 @@ export function StoryCard({ image, date, alt, heading, author }) {
         <span className="mb-4 text-[13px]">{`by ${author}`}</span>
         <hr className="mb-5 opacity-25" />
         <Link to={"/stories"}>
-          <button className="flex items-center justify-between text-[12px] font-bold tracking-[2px] hover:underline">
+          <button className="flex min-w-full items-center justify-between text-[12px] font-bold tracking-[2px] hover:underline">
             READ STORY
             <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
               <g fill="none" fillRule="evenodd" stroke="currentColor">
