@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/photosnap-multipage-website-reactreactroutertailwindcss-buJAhn8FhC)
 - Live Site URL: [Vercel](https://photosnap-jhellard.vercel.app/)
 
 ## My process
