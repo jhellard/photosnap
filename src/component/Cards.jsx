@@ -1,4 +1,5 @@
 import { Line } from "./Lines";
+import { Link } from "react-router-dom";
 
 export function InfoCard({
   image,
@@ -58,7 +59,23 @@ export function InfoCard({
         >
           {description}
         </p>
-        {button && (
+        {button === "VIEW THE STORIES" ? (
+          <Link to={"/stories"}>
+            <button className="text-[12px] font-bold tracking-[2px] hover:underline">
+              {button}
+              <svg
+                className="ml-[18px] inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                width="43"
+                height="16"
+              >
+                <g fill="none" fillRule="evenodd" stroke="currentColor">
+                  <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                </g>
+              </svg>
+            </button>
+          </Link>
+        ) : (
           <button className="text-[12px] font-bold tracking-[2px] hover:underline">
             {button}
             <svg
@@ -237,14 +254,16 @@ export function StoryCard({ image, date, alt, heading, author }) {
         <h3 className="mb-1 text-[18px] font-bold leading-[25px]">{heading}</h3>
         <span className="mb-4 text-[13px]">{`by ${author}`}</span>
         <hr className="mb-5 opacity-25" />
-        <button className="flex items-center justify-between text-[12px] font-bold tracking-[2px] hover:underline">
-          READ STORY
-          <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
-            <g fill="none" fillRule="evenodd" stroke="currentColor">
-              <path d="M0 7h41.864M35.428 1l6 6-6 6" />
-            </g>
-          </svg>
-        </button>
+        <Link to={"/stories"}>
+          <button className="flex items-center justify-between text-[12px] font-bold tracking-[2px] hover:underline">
+            READ STORY
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+              <g fill="none" fillRule="evenodd" stroke="currentColor">
+                <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+              </g>
+            </svg>
+          </button>
+        </Link>
       </div>
       <hr className="absolute bottom-0 hidden h-[6px] w-full border-none bg-gradient-to-t from-bgGradiant1 via-bgGradiant2 to-bgGradiant3 group-hover:block" />
     </li>
