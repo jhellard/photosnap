@@ -40,6 +40,7 @@ const Pricing = () => {
             description="Includes basic usage of our platform. Recommended for new and aspiring photographers."
             price={planToggle ? "$19.00" : "$190.00"}
             type="normal"
+            planToggle={planToggle}
           />
 
           <PlanCard
@@ -47,6 +48,7 @@ const Pricing = () => {
             description="More advanced features available. Recommended for photography veterans and professionals."
             price={planToggle ? "$39.00" : "$390.00"}
             type="pro"
+            planToggle={planToggle}
           />
 
           <PlanCard
@@ -55,6 +57,7 @@ const Pricing = () => {
           Recommended for business owners."
             price={planToggle ? "$99.00" : "$990.00"}
             type="normal"
+            planToggle={planToggle}
           />
         </ul>
         <PricingTable />

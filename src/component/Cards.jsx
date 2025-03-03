@@ -95,7 +95,7 @@ export function InfoCard({
   );
 }
 
-export function PlanCard({ heading, description, price, type }) {
+export function PlanCard({ heading, description, price, type, planToggle }) {
   const cardVariants = {
     normal: "bg-[#F5F5F5] text-pureBlack",
     pro: "bg-pureBlack text-pureWhite md:min-h-[470px]",
@@ -124,7 +124,7 @@ export function PlanCard({ heading, description, price, type }) {
       <h3 className="mb-10 text-[40px] font-bold leading-[48px] tracking-[4.17px] sm:self-start sm:text-right md:self-center md:text-center">
         {price}
         <span className="block text-[15px] leading-[25px] tracking-normal opacity-60">
-          per month
+          {planToggle ? "per month" : "per year"}
         </span>
       </h3>
       <button
